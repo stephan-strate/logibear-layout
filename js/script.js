@@ -3,6 +3,7 @@ var api_url = "https://api.logibear.de/";
 /* GLOBAL VARIABLES END */
 
 $(document).ready(function () {
+    /*
     compareTerms("A&B", "B&A").done(function (data) {
         alert(readTerm(data));
     }).fail(function (error) {
@@ -10,7 +11,44 @@ $(document).ready(function () {
     }).progress(function (progress) {
         console.log(progress);
     });
+    */
+
+    $("#lb-comparison-start").on("click", function (event) {
+        doRequest("comparison", compareTerms, 2, null);
+    });
 });
+
+function doRequest (endpoint, func, amount, callback) {
+    // Show loading animation
+    $("#lb-" + endpoint + "-loader").show();
+
+    // Hide button
+    $("#lb-" + endpoint + "-start").hide();
+
+    // Disable inputs
+    for (var i = 1; i < (amount + 1); i++) {
+        $("#lb-" + endpoint + "-term" + i).prop("disabled", true);
+    }
+
+    // Hide result
+    $("#lb-" + endpoint + "-result").hide();
+
+    setTimeout(function () {
+        // Hide loading animation
+        $("#lb-" + endpoint + "-loader").hide();
+
+        // Show button
+        $("#lb-" + endpoint + "-start").show();
+
+        // Enable inputs
+        for (var i = 1; i < (amount + 1); i++) {
+            $("#lb-" + endpoint + "-term" + i).prop("disabled", false);
+        }
+
+        // Show result
+        $("#lb-" + endpoint + "-result").show();
+    }, 1000);
+}
 
 /**
  * "comparison" endpoint of logibear api.
