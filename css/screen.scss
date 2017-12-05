@@ -1,3 +1,90 @@
 @media screen {
+    [hidden] {
+        display: none !important;
+    }
 
+    nav {
+        background-color: #041368;
+    }
+
+    section#module {
+
+    }
+
+    section#faq {
+        background-color: #d8e4ec;
+    }
+
+    footer {
+        background-color: #041368;
+    }
+
+    .result {
+        display: none;
+    }
+
+    .loader {
+        display: none;
+
+        .line {
+            width: 1px;
+            height: 12px;
+            background: #000000;
+            margin: 0 1px;
+            display: inline-block;
+            animation: opacity-1 1000ms infinite ease-in-out;
+        }
+
+        .line {
+            width: 1px;
+            height: 12px;
+            background: #000000;
+            margin: 0 1px;
+            display: inline-block;
+            animation: opacity-2 1000ms infinite ease-in-out;
+        }
+
+        .line-1, line-9 {
+            animation-delay: 800ms;
+        }
+
+        .line-2, .line-8 {
+            animation-delay: 600ms;
+        }
+
+        .line-3, .line-7 {
+            animation-delay: 400ms;
+        }
+
+        .line-4, .line-6 {
+            animation-delay: 200ms;
+        }
+
+        @keyframes opacity-1 {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes opacity-2 {
+            0% {
+                opacity: 1;
+                height: 15px;
+            }
+            50% {
+                opacity: 0;
+                height: 12px;
+            }
+            100% {
+                opacity: 1;
+                height: 15px;
+            }
+        }
+    }
 }
