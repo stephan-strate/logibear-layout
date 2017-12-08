@@ -1,43 +1,32 @@
 /* GLOBAL VARIABLES */
 var api_url = "https://api.logibear.de/";
+api_url = "http://vserver1.statc.de:4567/";
+// api_url = "http://api.statc.de/";
 /* GLOBAL VARIABLES END */
 
 $(document).ready(function () {
-    /*
-    compareTerms("A&B", "B&A").done(function (data) {
-        alert(readTerm(data));
-    }).fail(function (error) {
-        console.log(error);
-    }).progress(function (progress) {
-        console.log(progress);
-    });
-    */
-
     $("#lb-comparison-start").on("click", function (event) {
         doRequest("comparison", compareTerms, 2, null);
     });
 });
 
 function doRequest (endpoint, func, amount, callback) {
-    // Show loading animation
     $("#lb-" + endpoint + "-loader").show();
-
-    // Hide button
     $("#lb-" + endpoint + "-start").hide();
+    $("#lb-" + endpoint + "-result").hide();
 
     // Disable inputs
     for (var i = 1; i < (amount + 1); i++) {
         $("#lb-" + endpoint + "-term" + i).prop("disabled", true);
     }
 
-    // Hide result
-    $("#lb-" + endpoint + "-result").hide();
+    var params = [];
+    for (var j = 1; j < (amount + 1); j++) {
+        params.push($("#lb-" + endpoint + "-term" + j).val());
+    }
 
-    setTimeout(function () {
-        // Hide loading animation
+    func(params).done(function (data) {
         $("#lb-" + endpoint + "-loader").hide();
-
-        // Show button
         $("#lb-" + endpoint + "-start").show();
 
         // Enable inputs
@@ -45,29 +34,38 @@ function doRequest (endpoint, func, amount, callback) {
             $("#lb-" + endpoint + "-term" + i).prop("disabled", false);
         }
 
-        // Show result
+        $("#lb-" + endpoint + "-result-value").html(data.status);
+        $("#lb-" + endpoint + "-result-message").html("");
         $("#lb-" + endpoint + "-result").show();
-    }, 1000);
+
+        callback ? callback(data) : "";
+    }).fail(function (error) {
+        $("#lb-" + endpoint + "-loader").hide();
+        $("#lb-" + endpoint + "-start").show();
+
+        // Enable inputs
+        for (var i = 1; i < (amount + 1); i++) {
+            $("#lb-" + endpoint + "-term" + i).prop("disabled", false);
+        }
+
+        $("#lb-" + endpoint + "-result-value").html("Undefined");
+        $("#lb-" + endpoint + "-result-message").html("Ein Problem ist aufgetreten.<br />Für Entwickler: " + error.toString());
+        $("#lb-" + endpoint + "-result").show();
+
+        callback ? callback(error) : "";
+    });
 }
 
 /**
  * "comparison" endpoint of logibear api.
  * Compares two terms in different formats
  * and returns a detailed result.
- * @param term1 string term in different formats
- * @param term2 string term in different formats
+ * @param terms string term in different formats
  * @returns {*}
  */
-function compareTerms (term1, term2) {
-    var terms = {
-        "type": "comparison",
-        "terms": [parseTerm(term1), parseTerm(term2)]
-    };
-
+function compareTerms (terms) {
     return $.ajax({
-        url: api_url + "comparison/",
-        type: "post",
-        data: terms
+        url: api_url + "comparison/" + parseTerm(terms[0]) + "/" + parseTerm(terms[1])
     });
 }
 
