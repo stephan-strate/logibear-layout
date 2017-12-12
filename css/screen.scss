@@ -4,7 +4,16 @@
     }
 
     nav {
-        background-color: #041368;
+        background-color: #ffffff;
+
+        &.collapsed {
+            border-bottom: 1px solid #d8d8d8;
+
+            a.navbar-brand {
+                margin-top: 0 !important;
+                transition: margin-top 100ms ease-in-out;
+            }
+        }
     }
 
     section#module {
