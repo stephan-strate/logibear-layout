@@ -22,13 +22,20 @@
 <body class="container-fluid">
     <!-- NAVBAR -->
     <nav id="nav" class="row navbar navbar-expand-lg navbar-light sticky-top p-1">
+        <!-- NAVBAR BRAND -->
+        <a href="https://www.logibear.de/" target="_self" title="Logibear" class="navbar-brand text-dark ml-3 ml-lg-0 mt-lg-3">Logibear</a>
+        <!-- NAVBAR BRAND end -->
+
         <!-- NAVBAR TOGGLER -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-collapse" aria-controls="dual-collapse" aria-expanded="false" aria-label="Menü öffnen">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Menü öffnen">
             <span class="navbar-toggler-icon"></span>
         </button>
         <!-- NAVBAR TOGGLER end -->
-        <section class="navbar-collapse collapse dual-collapse pl-lg-5">
-            <ul class="navbar-nav mr-auto">
+
+        <!-- MENU -->
+        <section id="navbar" class="navbar-collapse collapse mt-lg-3">
+            <!-- MENU LEFT -->
+            <ul id="navbar-left" class="navbar-nav pl-lg-5">
                 <li class="nav-item list-inline-item">
                     <a href="#about" class="nav-link text-secondary">Über uns</a>
                 </li>
@@ -39,10 +46,10 @@
                     <a href="#doc" class="nav-link text-secondary">Dokumentation</a>
                 </li>
             </ul>
-        </section>
-        <a href="https://www.logibear.de/" target="_self" title="Logibear" class="navbar-brand d-flex mx-auto mt-3 text-dark">Logibear</a>
-        <section class="navbar-collapse collapse dual-collapse pr-lg-5">
-            <ul class="navbar-nav ml-auto">
+            <!-- MENU LEFT end -->
+
+            <!-- MENU RIGHT -->
+            <ul id="navbar-right" class="navbar-nav ml-lg-auto pr-lg-5">
                 <li class="nav-item">
                     <a href="#help" class="nav-link text-secondary">Hilfe</a>
                 </li>
@@ -53,7 +60,9 @@
                     <a href="https://slack.logibear.de/" target="_blank" class="nav-link text-secondary"><i class="fab fa-slack-hash"></i> Slack</a>
                 </li>
             </ul>
+            <!-- MENU RIGHT end -->
         </section>
+        <!-- MENU end -->
     </nav>
     <!-- NAVBAR end -->
 
