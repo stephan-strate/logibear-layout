@@ -5,6 +5,7 @@
 
     nav {
         background-color: #ffffff;
+        border-bottom: 1px solid #d8d8d8;
 
         button.navbar-toggler {
             border: none;
@@ -20,15 +21,20 @@
         }
 
         section#navbar {
+            // left side (large), bottom (mobile)
             ul#navbar-left {
                 text-align: center;
             }
 
+            // right side (large), top (mobile)
             ul#navbar-right {
+                // always inline items for bottom
                 -ms-flex-direction: row;
                 flex-direction: row;
+                // center for mobile
                 justify-content: center;
 
+                // always add padding
                 a.nav-link {
                     padding-right: .5rem;
                     padding-left: .5rem;
@@ -121,6 +127,9 @@
 
 @media screen and (min-width: 992px) {
     nav {
+        border-bottom: none;
+
+        // brand fix on large displays
         a.navbar-brand {
             position: absolute;
             width: 100%;
