@@ -132,10 +132,8 @@
         // brand fix on large displays
         a.navbar-brand {
             position: absolute;
-            width: 100%;
-            left: 0;
-            text-align: center;
-            margin: 0 auto;
+            left: 50%;
+            transform: translateX(-50%);
         }
     }
 }

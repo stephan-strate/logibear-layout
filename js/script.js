@@ -12,7 +12,7 @@ $(document).ready(function () {
 
 $(window).scroll(function () {
     var nav = $("#nav");
-    if ($(window).scrollTop() > 20) {
+    if ($(window).scrollTop() > 0) {
         nav.addClass("collapsed");
     } else {
         nav.removeClass("collapsed");
