@@ -21,9 +21,14 @@
 </head>
 <body class="container-fluid">
     <!-- NAVBAR -->
-    <nav id="nav" class="row navbar navbar-expand-lg navbar-light sticky-top p-1 mb-4">
+    <nav id="nav" class="row navbar navbar-expand-lg navbar-light sticky-top p-1 mb-5">
         <!-- NAVBAR BRAND -->
-        <a href="https://www.logibear.de/" target="_self" title="Logibear" class="navbar-brand text-dark ml-3 ml-lg-0 mt-lg-3">Logibear</a>
+        <a href="https://www.logibear.de/" target="_self" title="Logibear" class="navbar-brand text-dark ml-3 ml-lg-0 mt-lg-3">
+            <svg height="75" width="50">
+                <polygon points="25,0 50,37.5 25,75 0,37.5" style="stroke:#eee; fill:white; stroke-width:1px;"></polygon>
+            </svg>
+            <span>Logibear</span>
+        </a>
         <!-- NAVBAR BRAND end -->
 
         <!-- NAVBAR TOGGLER -->
@@ -37,13 +42,13 @@
             <!-- MENU LEFT -->
             <ul id="navbar-left" class="navbar-nav pl-lg-5">
                 <li class="nav-item list-inline-item">
-                    <a href="#about" class="nav-link text-secondary">Über uns</a>
+                    <a href="#about" target="_self" title="Dokumentation" class="nav-link text-secondary">Über uns</a>
                 </li>
                 <li class="nav-item list-inline-item">
-                    <a href="#features" class="nav-link text-secondary">Features</a>
+                    <a href="#features" target="_self" title="Dokumentation" class="nav-link text-secondary">Features</a>
                 </li>
                 <li class="nav-item list-inline-item">
-                    <a href="#doc" class="nav-link text-secondary">Dokumentation</a>
+                    <a href="https://www.logibear.de/dokumentation" target="_self" title="Dokumentation" class="nav-link text-secondary">Dokumentation</a>
                 </li>
             </ul>
             <!-- MENU LEFT end -->
@@ -51,7 +56,7 @@
             <!-- MENU RIGHT -->
             <ul id="navbar-right" class="navbar-nav ml-lg-auto pr-lg-5">
                 <li class="nav-item">
-                    <a href="#faq" class="nav-link text-secondary">Hilfe</a>
+                    <a href="#faq" target="_self" title="Hilfe" class="nav-link text-secondary">Hilfe</a>
                 </li>
                 <li class="nav-item">
                     <a href="https://github.com/jp-richter/logibear" target="_blank" class="nav-link text-secondary"><i class="fab fa-github"></i> GitHub</a>
@@ -106,7 +111,7 @@
         <section class="col-xl-9 col-lg-12 p-3 p-sm-5">
             <section class="row">
                 <!-- INPUT/RESULT -->
-                <section class="col-lg-6 col-md-12">
+                <section class="col-lg-8 col-md-12">
                     <!-- DESCRIPTION -->
                     <h3 class="text-center"><small>Vergleiche zwei aussagenlogische Formeln</small></h3>
                     <p class="text-center">
@@ -169,13 +174,14 @@
                 <!-- INPUT/RESULT end -->
 
                 <!-- EXAMPLES -->
-                <section class="col-lg-6 col-md-12 mt-4 mt-lg-0">
+                <section class="col-lg-4 col-md-12 mt-4 mt-lg-0">
                     <section class="jumbotron p-3">
                         <h4 class="text-center"><small>Erläuterungen</small></h4>
                         <p><kbd>&</kbd> repräsentiert <code>∧</code>, dies ermöglicht eine einfache und schnelle Eingabe von Formeln.<br />
                         <u>Beispiel:</u> <kbd>A & B</kbd> = <code>A ∧ B</code></p>
                         <p><kbd>|</kbd> repräsentiert <code>∨</code>.<br />
                         <u>Beispiel:</u> <kbd>A | B</kbd> = <code>A ∨ B</code></p>
+                        <p>Weitere Beispiele? <a href="https://www.logibear.de/dokumentation" target="_self" title="Dokumentation">Dokumentation</a></p>
                     </section>
                 </section>
                 <!-- EXAMPLES end -->

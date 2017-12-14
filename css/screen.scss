@@ -3,9 +3,38 @@
         display: none !important;
     }
 
+    // reset bootstrap border/box-shadow
+    .btn {
+        -webkit-border-radius: 0;
+        -moz-border-radius: 0;
+        border-radius: 0;
+
+        &:focus, &:active {
+            box-shadow: none !important;
+        }
+    }
+
+    // reset border of nav toggler
+    .navbar-toggler:focus {
+        outline: none;
+    }
+
+    // reset bootstrap box-shadow
+    .form-control:focus {
+        box-shadow: none;
+    }
+
     nav {
         background-color: #ffffff;
         border-bottom: 1px solid #d8d8d8;
+
+        a.navbar-brand {
+            svg {
+                display: block;
+                margin: auto;
+                margin-top: 40px;
+            }
+        }
 
         button.navbar-toggler {
             border: none;
@@ -14,7 +43,16 @@
         &.collapsed {
             border-bottom: 1px solid #d8d8d8;
 
-            a.navbar-brand, section#navbar {
+            a.navbar-brand {
+                margin-top: 0 !important;
+                transition: margin-top 100ms ease-in-out;
+
+                span {
+                    display: none;
+                }
+            }
+
+            section#navbar {
                 margin-top: 0 !important;
                 transition: margin-top 100ms ease-in-out;
             }
