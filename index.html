@@ -21,7 +21,7 @@
 </head>
 <body class="container-fluid">
     <!-- NAVBAR -->
-    <nav id="nav" class="row navbar navbar-expand-lg navbar-light sticky-top p-1">
+    <nav id="nav" class="row navbar navbar-expand-lg navbar-light sticky-top p-1 mb-4">
         <!-- NAVBAR BRAND -->
         <a href="https://www.logibear.de/" target="_self" title="Logibear" class="navbar-brand text-dark ml-3 ml-lg-0 mt-lg-3">Logibear</a>
         <!-- NAVBAR BRAND end -->
@@ -51,7 +51,7 @@
             <!-- MENU RIGHT -->
             <ul id="navbar-right" class="navbar-nav ml-lg-auto pr-lg-5">
                 <li class="nav-item">
-                    <a href="#help" class="nav-link text-secondary">Hilfe</a>
+                    <a href="#faq" class="nav-link text-secondary">Hilfe</a>
                 </li>
                 <li class="nav-item">
                     <a href="https://github.com/jp-richter/logibear" target="_blank" class="nav-link text-secondary"><i class="fab fa-github"></i> GitHub</a>
@@ -66,19 +66,56 @@
     </nav>
     <!-- NAVBAR end -->
 
-    <section id="module" class="row">
-        <section class="col-12">
-            <section class="row p-5">
-                <section class="col-md-1 col-lg-2"></section>
-                <section class="col-sm-12 col-md-10 col-lg-8">
+    <!-- FUNCTIONS -->
+    <section id="functions" class="row">
+        <!-- SUBMENU -->
+        <section class="col-xl-3 col-lg-12 pl-5 pr-5 pt-2 pb-2 mb-4 border border-left-0 border-top-0 border-bottom-0">
+            <ul class="nav flex-column">
+                <span class="navbar-text">
+                    Aussagenlogik
+                </span>
+                <li class="nav-item">
+                    <a href="#" class="nav-link active">Semantischer Vergleich</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Wertetabelle</a>
+                </li>
+                <span class="navbar-text">
+                    Umformungen
+                </span>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Negationsnormalform</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Konjunktive Normalform</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Disjunktive Normalform</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Hornformel</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Implikationsform (Hornformel)</a>
+                </li>
+            </ul>
+        </section>
+        <!-- SUBMENU end -->
+
+        <!-- FUNCTIONS CONTENT -->
+        <section class="col-xl-9 col-lg-12 p-3 p-sm-5">
+            <section class="row">
+                <!-- INPUT/RESULT -->
+                <section class="col-lg-6 col-md-12">
                     <!-- DESCRIPTION -->
                     <h3 class="text-center"><small>Vergleiche zwei aussagenlogische Formeln</small></h3>
                     <p class="text-center">
                         Hier können zwei aussagenlogische Formeln auf semantische Äquivalenz überprüft werden. Die Syntax zur Eingabe kannst Du
-                        den Beispielen oder Dokumentation entnehmen.
+                        den Beispielen oder der Dokumentation entnehmen.
                     </p>
                     <!-- DESCRIPTION end -->
 
+                    <!-- INPUT -->
                     <section class="input-group">
                         <span class="input-group-addon" id="lb-comparison-term1-label">φ<sub>1</sub></span>
                         <input type="text" id="lb-comparison-term1" class="form-control" placeholder="A ∧ B" aria-label="x1" aria-describedby="lb-comparison-term1-label">
@@ -88,13 +125,18 @@
                         <input type="text" id="lb-comparison-term2" class="form-control" placeholder="B ∧ A" aria-label="x1" aria-describedby="lb-comparison-term2-label">
                         <span class="input-group-addon" id="lb-comparison-term2-label">φ<sub>2</sub></span>
                     </section>
+                    <!-- INPUT end -->
 
+                    <!-- BUTTONS -->
                     <section class="d-flex justify-content-center mt-3">
-                        <section class="d-inline-flex">
+                        <section class="d-inline-flex btn-group">
                             <button type="button" id="lb-comparison-start" class="btn btn-info">Vergleich starten</button>
+                            <button type="button" id="lb-comparison-reset" class="btn btn-secondary">Zurücksetzen</button>
                         </section>
                     </section>
+                    <!-- BUTTONS end -->
 
+                    <!-- LOADER -->
                     <section class="d-flex justify-content-center">
                         <section class="d-inline-flex">
                             <section id="lb-comparison-loader" class="loader text-center">
@@ -111,7 +153,9 @@
                             </section>
                         </section>
                     </section>
+                    <!-- LOADER end -->
 
+                    <!-- RESULT -->
                     <section class="d-flex justify-content-center mt-2">
                         <section class="d-inline-flex">
                             <section id="lb-comparison-result" class="result text-center">
@@ -120,11 +164,26 @@
                             </section>
                         </section>
                     </section>
+                    <!-- RESULT end -->
                 </section>
-                <section class="col-md-1 col-lg-2"></section>
+                <!-- INPUT/RESULT end -->
+
+                <!-- EXAMPLES -->
+                <section class="col-lg-6 col-md-12 mt-4 mt-lg-0">
+                    <section class="jumbotron p-3">
+                        <h4 class="text-center"><small>Erläuterungen</small></h4>
+                        <p><kbd>&</kbd> repräsentiert <code>∧</code>, dies ermöglicht eine einfache und schnelle Eingabe von Formeln.<br />
+                        <u>Beispiel:</u> <kbd>A & B</kbd> = <code>A ∧ B</code></p>
+                        <p><kbd>|</kbd> repräsentiert <code>∨</code>.<br />
+                        <u>Beispiel:</u> <kbd>A | B</kbd> = <code>A ∨ B</code></p>
+                    </section>
+                </section>
+                <!-- EXAMPLES end -->
             </section>
         </section>
+        <!-- FUNCTIONS CONTENT end -->
     </section>
+    <!-- FUNCTIONS end -->
 
     <section id="faq" class="row p-2">
         <section class="col-sm-1 col-md-2"></section>
