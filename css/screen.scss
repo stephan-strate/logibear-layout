@@ -28,14 +28,6 @@
         background-color: #ffffff;
         border-bottom: 1px solid #d8d8d8;
 
-        a.navbar-brand {
-            svg {
-                display: block;
-                margin: auto;
-                margin-top: 40px;
-            }
-        }
-
         button.navbar-toggler {
             border: none;
         }
@@ -46,10 +38,6 @@
             a.navbar-brand {
                 margin-top: 0 !important;
                 transition: margin-top 100ms ease-in-out;
-
-                span {
-                    display: none;
-                }
             }
 
             section#navbar {
@@ -77,6 +65,22 @@
                     padding-right: .5rem;
                     padding-left: .5rem;
                 }
+            }
+        }
+    }
+
+    section#functions {
+        ul#lb-filter-functions-content {
+            &.collapse {
+                display: none !important;
+
+                &.show {
+                    display: block !important;
+                }
+            }
+
+            li.nav-item {
+                display: inline-block;
             }
         }
     }
@@ -168,6 +172,24 @@
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+        }
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    section#functions {
+        button#lb-filter-functions-button {
+            display: none;
+        }
+
+        ul#lb-filter-functions-content {
+            &.collapse {
+                display: block !important;
+            }
+
+            li.nav-item {
+                display: block;
+            }
         }
     }
 }

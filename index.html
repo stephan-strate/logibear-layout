@@ -24,10 +24,7 @@
     <nav id="nav" class="row navbar navbar-expand-lg navbar-light sticky-top p-1 mb-5">
         <!-- NAVBAR BRAND -->
         <a href="https://www.logibear.de/" target="_self" title="Logibear" class="navbar-brand text-dark ml-3 ml-lg-0 mt-lg-3">
-            <svg height="75" width="50">
-                <polygon points="25,0 50,37.5 25,75 0,37.5" style="stroke:#eee; fill:white; stroke-width:1px;"></polygon>
-            </svg>
-            <span>Logibear</span>
+            <span class="text-secondary">Logibear</span>
         </a>
         <!-- NAVBAR BRAND end -->
 
@@ -72,10 +69,14 @@
     <!-- NAVBAR end -->
 
     <!-- FUNCTIONS -->
-    <section id="functions" class="row">
+    <section id="functions" class="row pt-lg-5">
         <!-- SUBMENU -->
-        <section class="col-xl-3 col-lg-12 pl-5 pr-5 pt-2 pb-2 mb-4 border border-left-0 border-top-0 border-bottom-0">
-            <ul class="nav flex-column">
+        <section class="col-xl-3 col-lg-12 pl-5 pr-5 pt-2 pb-2 mb-lg-4 border border-left-0 border-top-0 border-bottom-0 text-center text-lg-left">
+            <button id="lb-filter-functions-button" class="btn btn-light" data-toggle="collapse" href="#lb-filter-functions-content" aria-expanded="false" aria-controls="lb-filter-functions-content">
+                <i class="fa fa-search"></i> Methode auswählen
+            </button>
+
+            <ul id="lb-filter-functions-content" class="nav collapse">
                 <span class="navbar-text">
                     Aussagenlogik
                 </span>
