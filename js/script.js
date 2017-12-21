@@ -1,7 +1,5 @@
 /* GLOBAL VARIABLES */
-var api_url = "https://api.logibear.de/";
-api_url = "http://vserver1.statc.de:4567/";
-// api_url = "http://api.statc.de/";
+var api_url = "http://api.logibear.de:4567/v1/";
 /* GLOBAL VARIABLES END */
 
 $(document).ready(function () {
@@ -43,7 +41,8 @@ function doRequest (endpoint, func, amount, callback) {
             $("#lb-" + endpoint + "-term" + i).prop("disabled", false);
         }
 
-        $("#lb-" + endpoint + "-result-value").html(data.status);
+        console.log(data.message.result);
+        $("#lb-" + endpoint + "-result-value").html(data.message.result + "");
         $("#lb-" + endpoint + "-result-message").html("");
         $("#lb-" + endpoint + "-result").show();
 
@@ -74,7 +73,7 @@ function doRequest (endpoint, func, amount, callback) {
  */
 function compareTerms (terms) {
     return $.ajax({
-        url: api_url + "comparison/" + parseTerm(terms[0]) + "/" + parseTerm(terms[1])
+        url: api_url + "comparison/" + parseTerm(terms[0]) + "/" + parseTerm(terms[1]) + "?api_key=940feae2-0b36-4ea1-ba68-98f527157150"
     });
 }
 
