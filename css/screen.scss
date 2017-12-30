@@ -1,37 +1,46 @@
 @media screen {
+    // change selection color
+    ::selection {
+        background: #c8f1ff; /* WebKit/Blink Browsers */
+    }
+    ::-moz-selection {
+        background: #c8f1ff; /* Gecko Browsers */
+    }
+
+    // attributes
     [hidden] {
         display: none !important;
     }
 
+    // helper classes
     .disabled {
         pointer-events: none;
     }
 
-    // reset bootstrap border/box-shadow
+    // bootstrap resets
     .btn {
         -webkit-border-radius: 0;
         -moz-border-radius: 0;
-        border-radius: 0;
+        border-radius: 0; /* reset bootstrap border */
 
         &:focus, &:active {
-            box-shadow: none !important;
+            box-shadow: none !important; /* reset bootstrap box-shadow */
         }
     }
 
-    // reset border of nav toggler
     .navbar-toggler:focus {
-        outline: none;
+        outline: none; /* reset border of nav toggler */
     }
 
-    // reset bootstrap box-shadow
     .form-control:focus {
-        box-shadow: none;
+        box-shadow: none; /* reset bootstrap box-shadow */
     }
 
     .border-divider {
         border-color: #e6e6e6 !important;
     }
 
+    // navigation
     nav {
         background-color: #ffffff;
         border-bottom: 1px solid #d8d8d8;
