@@ -3,6 +3,10 @@
         display: none !important;
     }
 
+    .disabled {
+        pointer-events: none;
+    }
+
     // reset bootstrap border/box-shadow
     .btn {
         -webkit-border-radius: 0;
@@ -22,6 +26,10 @@
     // reset bootstrap box-shadow
     .form-control:focus {
         box-shadow: none;
+    }
+
+    .border-divider {
+        border-color: #e6e6e6 !important;
     }
 
     nav {
@@ -89,10 +97,6 @@
         background-color: #d8e4ec;
     }
 
-    footer {
-        background-color: #041368;
-    }
-
     .result {
         display: none;
     }
@@ -158,6 +162,16 @@
             100% {
                 opacity: 1;
                 height: 15px;
+            }
+        }
+    }
+
+    section#sponsors {
+        ul {
+            li {
+                &.list-inline-item:not(:last-child) {
+                    margin-right: 0;
+                }
             }
         }
     }
