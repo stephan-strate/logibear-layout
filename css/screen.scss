@@ -1,4 +1,8 @@
 @media screen {
+    body {
+        background: linear-gradient(36deg, #1c79c0, #0389ff, #0dd3ff);
+    }
+
     // default styles
     select {
         border: 1px solid #e9ecef !important;
@@ -49,11 +53,31 @@
 
     // navigation
     nav {
-        background-color: #ffffff;
         border-bottom: 1px solid #d8d8d8;
+        background-color: #ffffff !important;
 
         button.navbar-toggler {
             border: none;
+        }
+
+        a.navbar-brand {
+            span {
+                color: #868e96 !important;
+            }
+        }
+
+        section#navbar {
+            ul {
+                li {
+                    a {
+                        color: #868e96 !important;
+
+                        &:hover {
+                            color: #6c757d;
+                        }
+                    }
+                }
+            }
         }
 
         &.collapsed {
@@ -94,6 +118,8 @@
     }
 
     section#selection {
+        margin-bottom: -40px;
+
         ul#lb-functions-selection-list {
             li {
                 margin-right: 0;
@@ -111,6 +137,8 @@
     }
 
     section#functions {
+        background-color: #ffffff;
+
         ul#lb-filter-functions-content {
             &.collapse {
                 display: none !important;
@@ -200,6 +228,8 @@
     }
 
     section#sponsors {
+        background-color: #ffffff;
+
         ul {
             li {
                 &.list-inline-item:not(:last-child) {
@@ -208,18 +238,70 @@
             }
         }
     }
+
+    footer {
+        background-color: #ffffff;
+    }
 }
 
 @media screen and (min-width: 992px) {
     nav {
         border-bottom: none;
+        background-color: transparent !important;
 
         // brand fix on large displays
         a.navbar-brand {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
+            
+            span {
+                color: #f8f9fa !important;
+            }
         }
+
+        section#navbar {
+            ul {
+                li {
+                    a {
+                        color: #f8f9fa !important;
+
+                        &:hover {
+                            color: #f8f9fa !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.collapsed {
+            background-color: #ffffff !important;
+
+            a.navbar-brand {
+                span {
+                    color: #868e96 !important;
+                }
+            }
+
+            section#navbar {
+                ul {
+                    li {
+                        a {
+                            color: #6c757d !important;
+
+                            &:hover {
+                                color: #6c757d !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+    section#selection {
+        margin-bottom: -85px;
     }
 }
 
