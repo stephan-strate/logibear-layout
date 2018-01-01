@@ -1,4 +1,11 @@
 @media screen {
+    // default styles
+    select {
+        border: 1px solid #e9ecef !important;
+        font-weight: 400;
+        font-size: 80%;
+    }
+
     // change selection color
     ::selection {
         background: #c8f1ff; /* WebKit/Blink Browsers */
@@ -81,6 +88,23 @@
                 a.nav-link {
                     padding-right: .5rem;
                     padding-left: .5rem;
+                }
+            }
+        }
+    }
+
+    section#selection {
+        ul#lb-functions-selection-list {
+            li {
+                margin-right: 0;
+
+                &:hover {
+                    background-color: #c0ebf9;
+                    cursor: pointer;
+                }
+
+                &.selected {
+                    background-color: #c8f1ff;
                 }
             }
         }
