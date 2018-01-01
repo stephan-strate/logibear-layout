@@ -68,46 +68,55 @@
     </nav>
     <!-- NAVBAR end -->
 
-    <!-- FUNCTIONS -->
-    <section id="functions" class="row pt-lg-5">
-        <!-- SUBMENU -->
-        <section class="col-xl-3 col-lg-12 pl-5 pr-5 pt-2 pb-2 mb-lg-4 border border-left-0 border-top-0 border-bottom-0 text-center text-lg-left">
-            <button id="lb-filter-functions-button" class="btn btn-light" data-toggle="collapse" href="#lb-filter-functions-content" aria-expanded="false" aria-controls="lb-filter-functions-content">
-                <i class="fa fa-search"></i> Methode auswählen
-            </button>
-
-            <ul id="lb-filter-functions-content" class="nav collapse">
-                <span class="navbar-text">
-                    Aussagenlogik
-                </span>
-                <li class="nav-item">
-                    <a href="#" class="nav-link active">Semantischer Vergleich</a>
+    <!-- SELECTION -->
+    <section id="selection" class="row justify-content-center">
+        <section class="col-md-auto text-secondary text-center">
+            <h5><small>
+                <select name="categorie" id="lb-functions-categorie">
+                    <option value="propositional_logic" selected>
+                        Aussagenlogik
+                    </option>
+                    <option value="modal_logic" disabled>
+                        Modallogik
+                    </option>
+                    <option value="predicate_logic" disabled>
+                        Prädikatenlogik
+                    </option>
+                </select>
+                <label class="pl-2" for="lb-functions-categorie">
+                    Was möchtest du tun?
+                </label>
+            </small></h5>
+            <ul class="list-inline text-center text-uppercase rounded bg-light mb-0 p-3">
+                <li class="list-inline-item p-2 pl-3 pr-3">
+                    <small>Semantischer<br />Vergleich</small>
                 </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Wertetabelle</a>
+                <li class="list-inline-item p-2 pl-3 pr-3">
+                    <label for="lb-functions-evaluate"><small>Auswerten</small></label><br />
+                    <select name="evaluate" id="lb-functions-evaluate">
+                        <option disabled selected>Auswertung wählen</option>
+                        <option value="value_table">Wertetabelle</option>
+                        <option value="graph">Graph</option>
+                    </select>
                 </li>
-                <span class="navbar-text">
-                    Umformungen
-                </span>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Negationsnormalform</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Konjunktive Normalform</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Disjunktive Normalform</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Hornformel</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#" class="nav-link">Implikationsform (Hornformel)</a>
+                <li class="list-inline-item p-2 pl-3 pr-3">
+                    <label for="lb-functions-transformation"><small>Umformung</small></label><br />
+                    <select name="transformation" id="lb-functions-transformation">
+                        <option disabled selected>Umformung wählen</option>
+                        <option value="negation">Negationsnormalform</option>
+                        <option value="conjunctive">Konjunktive Normalform</option>
+                        <option value="disjunctive">Disjunktive Normalform</option>
+                        <option value="horn_formula">Hornformel</option>
+                        <option value="implicational">Implikationsform</option>
+                    </select>
                 </li>
             </ul>
         </section>
-        <!-- SUBMENU end -->
+    </section>
+    <!-- SELECTION end -->
 
+    <!-- FUNCTIONS -->
+    <section id="functions" class="row pt-lg-5">
         <!-- FUNCTIONS CONTENT -->
         <section class="col-xl-9 col-lg-12 p-3 p-sm-5">
             <section class="row">
@@ -274,7 +283,7 @@
             <!-- FOOTER MENU -->
             <section class="row">
                 <!-- DESCRIPTION -->
-                <section class="col-md-12 col-xl-5">
+                <section class="col-md-12 col-xl-5 text-center text-sm-left">
                     <h3><small>Logibear</small></h3>
                     <p class="text-secondary">Logibear kann logische Terme auswerten, umformen und verarbeiten. Hier direkt mit einfacher Bedienung oder als Entwickler mit Zugriff auf unsere dokumentierte Schnittstelle.</p>
                 </section>
