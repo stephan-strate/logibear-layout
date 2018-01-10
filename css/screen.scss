@@ -10,6 +10,15 @@
         font-size: 80%;
     }
 
+    a {
+        color: #bd4147;
+        transition: color 850ms ease;
+
+        &:hover {
+            color: #000000;
+        }
+    }
+
     // change selection color
     ::selection {
         background: #c8f1ff; /* WebKit/Blink Browsers */

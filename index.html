@@ -39,13 +39,16 @@
             <!-- MENU LEFT -->
             <ul id="navbar-left" class="navbar-nav pl-lg-5">
                 <li class="nav-item list-inline-item">
-                    <a href="#about" target="_self" title="Über uns" class="nav-link">Über uns</a>
+                    <a href="#about" target="_self" title="Alles über die Entwickler und die Organisation" class="nav-link">Über uns</a>
                 </li>
                 <li class="nav-item list-inline-item">
-                    <a href="#features" target="_self" title="Features" class="nav-link">Features</a>
+                    <a href="#selection" target="_self" title="Die Funktionen in der Übersicht" class="nav-link">Funktionen</a>
                 </li>
                 <li class="nav-item list-inline-item">
-                    <a href="https://www.logibear.de/doc/" target="_self" title="Dokumentation" class="nav-link">Dokumentation</a>
+                    <a href="https://www.logibear.de/learn/" target="_self" title="Jetzt Logik lernen mit den interaktiven Übungen" class="nav-link">Lernen</a>
+                </li>
+                <li class="nav-item list-inline-item">
+                    <a href="https://www.logibear.de/doc/" target="_self" title="Vollständige Dokumentation zur Syntax" class="nav-link">Dokumentation</a>
                 </li>
             </ul>
             <!-- MENU LEFT end -->
@@ -53,13 +56,13 @@
             <!-- MENU RIGHT -->
             <ul id="navbar-right" class="navbar-nav ml-lg-auto pr-lg-5">
                 <li class="nav-item">
-                    <a href="#faq" target="_self" title="Hilfe" class="nav-link">Hilfe</a>
+                    <a href="#faq" target="_self" title="Häufig gestellte Fragen" class="nav-link" rel="help">Hilfe</a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://github.com/jp-richter/logibear" target="_blank" class="nav-link"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://github.com/jp-richter/logibear" target="_blank" title="GitHub Repository zur Schnittstelle" class="nav-link" rel="external"><i class="fab fa-github"></i> GitHub</a>
                 </li>
                 <li class="nav-item">
-                    <a href="https://slack.logibear.de/" target="_blank" class="nav-link"><i class="fab fa-slack-hash"></i> Slack</a>
+                    <a href="https://slack.logibear.de/" target="_blank" title="Öffentlicher Slack Workspace" class="nav-link" rel="external"><i class="fab fa-slack-hash"></i> Slack</a>
                 </li>
             </ul>
             <!-- MENU RIGHT end -->
@@ -206,27 +209,31 @@
         <section class="col-sm-10 col-md-8">
             <section class="row">
                 <section class="col-12 text-center mb-2 mt-3">
-                    <h3><small>Häufig gestellte Fragen</small></h3>
+                    <h4 class="text-uppercase"><small>Häufig gestellte Fragen</small></h4>
                 </section>
                 <section class="col-sm-12 col-md-6 col-lg-4">
-                    <b>Lorem ipsum dolor sit amet?</b>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <small class="text-uppercase font-weight-bold">Welche Syntax wird für die logischen Terme genutzt?</small>
+                    <p>Beispielhaft kann die Syntax den Erläuterungen neben der jeweiligen Funktion entnommen werden. Die detaillierte Beschreibung der Syntax ist in unserer
+                        <a href="https://www.logibear.de/doc/" target="_self" title="Dokumentation">Dokumentation</a> zu finden.</p>
                 </section>
                 <section class="col-sm-12 col-md-6 col-lg-4">
-                    <b>Lorem ipsum dolor sit amet?</b>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <small class="text-uppercase font-weight-bold">Wie kann ich auf die Schnittstelle zugreifen?</small>
+                    <p>Generell bieten wir keinen uneingeschränkten Zugang zu unserer Schnittstelle, um unsere Server Kapazitäten garantieren zu können. Entwickler können im
+                        <a href="https://api.logibear.de/" target="_blank" title="Entwicklerportal">Entwicklerportal</a> einen Zugangsschlüssel anfordern, zudem bieten wir spezielle Konditionen für
+                        <a href="https://api.logibear.de/student/" target="_blank" title="Studenten">Studenten</a>.</p>
                 </section>
                 <section class="col-sm-12 col-md-6 col-lg-4">
-                    <b>Lorem ipsum dolor sit amet?</b>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    <small class="text-uppercase font-weight-bold">Wie kann ich das Projekt unterstützen?</small>
+                    <p>Als Entwickler kannst du über <a href="https://github.com/jp-richter/logibear" target="_blank" title="GitHub Repository zur Schnittstelle" rel="external">GitHub</a> etwas zum Code beisteuern. Es ist allerdings keine besondere Unterstützung notwendig, die reine Nutzung der Webseite ist Unterstützung genug.</p>
                 </section>
                 <section class="col-sm-12 col-md-6 col-lg-4">
-                    <b>Lorem ipsum dolor sit amet?</b>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                    <small class="text-uppercase font-weight-bold">Wofür werden Cookies benötigt/benutzt?</small>
+                    <p>Wir nutzen Google Analytics, um die Nutzung unserer Webseite zu analysieren und um Stolpersteine oder Fehler schnellstmöglich zu beseitigen. Wenn du Google Analytics nicht nutzen möchtest, kannst du dich
+                        <a href="https://tools.google.com/dlpage/gaoptout?hl=de" target="_blank" title="Tool um Google Analytics zu deaktivieren" rel="external">hier</a> informieren.</p>
                 </section>
                 <section class="col-sm-12 col-md-6 col-lg-4">
-                    <b>Lorem ipsum dolor sit amet?</b>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</p>
+                    <small class="text-uppercase font-weight-bold">Wie finanziert sich dieses Projekt?</small>
+                    <p>Dieses Open Source Projekt finanziert sich durch die Entwickler. Die Webseite ist vollkommen werbefrei.</p>
                 </section>
                 <section class="col-12 text-center mb-2">
                     <p>Frage nicht beantwortet? <a href="mailto:hello@logibear.de" target="_blank" title="E-Mail senden">E-Mail senden</a></p>
@@ -285,7 +292,7 @@
                 <!-- DESCRIPTION -->
                 <section class="col-md-12 col-xl-5 text-center text-sm-left">
                     <h3><small>Logibear</small></h3>
-                    <p class="text-secondary">Logibear kann logische Terme auswerten, umformen und verarbeiten. Hier direkt mit einfacher Bedienung oder als Entwickler mit Zugriff auf unsere dokumentierte Schnittstelle.</p>
+                    <p class="text-secondary">Logibear kann logische Terme vergleichen, umformen und auswerten. Mit Benutzeroberfläche direkt hier auf logibear.de oder als Entwickler mit Zugang zu unserer Schnittstelle.</p>
                 </section>
                 <!-- DESCRIPTION end -->
 
@@ -369,10 +376,10 @@
                             <a href="https://slack.logibear.de/" class="text-secondary" target="_blank" title="Slack"><i class="fab fa-slack-hash"></i></a>
                         </li>
                         <li class="list-inline-item m-1 mt-0">
-                            <a href="#" class="text-secondary" target="_blank" title="Xing"><i class="fab fa-xing"></i></a>
+                            <a href="#" class="text-secondary" target="_blank" title="Xing" rel="author"><i class="fab fa-xing"></i></a>
                         </li>
                         <li class="list-inline-item m-1 mt-0">
-                            <a href="#" class="text-secondary" target="_blank" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="text-secondary" target="_blank" title="LinkedIn" rel="author"><i class="fab fa-linkedin-in"></i></a>
                         </li>
                     </ul>
                 </section>
